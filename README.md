@@ -3,6 +3,29 @@ Prototype for a mail client
 
 This prototype displays a list of messages and the message text upon selection of a message.
 
+## Notes on the implementation, approaches, frameworks and libraries used
+
+This protoype was developed using the Angular2 framework with TypeScript.
+I used angular-cli to generate the project according the Angular2 project best practices (See the last section).
+
+I created the messages module to encapsulate the messages functionality so that it can be reused in other projects. Most of the could could be used with mobile frameworks such as NativeScript and Ionic2 to create cross platform mobile apps.
+
+To format the date and time easily, I used the well known moment.js (http://momentjs.com/) library.
+
+## TODO list for a production ready version
+
+- Make it look beautiful (I did not spend a lot of time of the styling of the application - it has a "minimalistic" design ;) )
+- Write tests (All the existing tests were generate by angular-cli)
+- Update the endpoint url (For now it only points to the local mockdata JSON file)
+- Delete and Mark-As-Read only work locally on the list (Since there is no persistence of the data)
+- Implement better error alerts
+- Loading bar / spinner / icon while loading date from the backend needs to be added
+- Consider integrating a UI-library to make the developing of UI components simpler e.g. React (https://www.npmjs.com/package/angular2-react) or Angular Material (https://github.com/angular/material2)
+
+Below are some notes with regards to angular2-cli and how to run the app locally
+
+## Angular2-cli
+
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.16.
 
 ## Development server
@@ -32,3 +55,5 @@ Run `ng github-pages:deploy` to deploy to Github Pages.
 ## Further help
 
 To get more help on the `angular-cli` use `ng --help` or go check out the [Angular-CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
