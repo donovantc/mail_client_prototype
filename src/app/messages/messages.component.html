@@ -1,0 +1,9 @@
+<div id="mySidenav" class="sidenav">
+  <div class="headerBox">
+    <h1>{{title}}</h1>
+  </div>
+  <app-message-list [messages]="messages" (onSelMessageChanged)="onSelMessageChanged($event)"></app-message-list>  
+</div>
+<div class="details">
+  <app-message-detail [message]="selectedMessage"></app-message-detail>
+</div>

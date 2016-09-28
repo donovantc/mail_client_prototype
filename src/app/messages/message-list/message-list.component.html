@@ -1,0 +1,15 @@
+<ul class="messages">
+  <li *ngFor="let message of messages; let i = index"
+      [class.selected]="message === selectedMessage"
+      [class.unread]="!message.read"
+      (click)="onSelect(message)">
+      
+      <div class="messageItem" >
+        <h3>{{message.sender}}</h3>
+        <h4>{{message.subject}}</h4>
+        <p>{{message.time_sent | messageDate}}</p>
+        <span class="delete" (click)="onDelete(i)"></span>
+      </div>
+
+  </li>
+</ul>

@@ -1,0 +1,96 @@
+.selected {
+      background-color: grey !important;
+      color: white;
+    }
+
+.messages {
+      margin: 0 0 0 0;
+      padding: 0;
+      width: 100%;
+      list-style-type: none;
+}
+
+.messages li {
+    cursor: pointer;
+    position: relative;
+    left: 0;
+    background-color: white;
+    text-align: left;
+    line-height: .5em;
+    box-shadow: 0 4px 4px -2px #000000;
+    border-left: 0px;
+    margin-left: 2px;
+}
+.messages li.selected:hover {
+    background-color: #BBD8DC !important;
+    color: white;
+}
+.messages li:hover {
+    color: grey;
+    background-color: #DDD;
+    left: .1em;
+}
+.messages li.unread {
+    font-weight: bolder !important;
+    border-left: 6px solid black;
+}
+.messages li.unread h3{
+    font-weight: bold !important;
+}
+.messages li.unread h4{
+    font-weight: bold !important;
+}
+.messageItem{
+    display: block;
+    line-height: .1em;
+    overflow: hidden;
+    margin: 5px;  
+}
+.messageItem h3 {
+    font-weight: lighter;
+}
+.messageItem h4 {
+    font-weight: lighter;
+    font-style: italic;
+}
+.messageItem p{
+    font-size: smaller;
+}
+
+.delete {
+    position: absolute;
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    overflow: hidden;
+    top: 0px;
+    right: 0px;
+    margin: .5em;
+}
+.delete:hover::before, .delete:hover::after {
+  background: #1ebcc5;
+}
+.delete::before, .delete::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #000;
+}
+.delete::before {
+  /*-webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);*/
+  transform: rotate(45deg);
+}
+.delete::after {
+  /*-webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);*/
+  transform: rotate(-45deg);
+}
