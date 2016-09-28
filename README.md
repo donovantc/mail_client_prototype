@@ -1,5 +1,5 @@
-## mail_client_prototype
-Prototype for a mail client
+## Mail Client Prototype
+A simple prototype for a mail client
 
 This prototype displays a list of messages and the message text upon selection of a message.
 
